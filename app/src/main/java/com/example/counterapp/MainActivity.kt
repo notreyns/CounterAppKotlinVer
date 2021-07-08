@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
             result.text= formattedRes
         }
     }
-    override fun onSaveInstanceState(outState: Bundle) { // Here You have to save count value
+    override fun onSaveInstanceState(outState: Bundle) { 
         super.onSaveInstanceState(outState)
         outState.putString("result", result.text.toString())
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) { // Here You have to restore count value
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) { 
         super.onRestoreInstanceState(savedInstanceState)
         result.text= savedInstanceState.getString("result")
 
